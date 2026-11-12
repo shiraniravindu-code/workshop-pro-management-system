@@ -1,0 +1,14 @@
+{
+  "name": "workshop-job-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vehicle repair workshop job tracking system",
+  "scripts": {
+    "test": "npm --prefix backend test && npm --prefix frontend test",
+    "lint": "npm --prefix frontend run lint",
+    "build": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend start",
+    "dev:frontend": "npm --prefix frontend run dev"
+  },
+  "license": "ISC"
+}
