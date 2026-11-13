@@ -218,7 +218,7 @@ function AdminManagement({ request, currentUser }) {
 
   async function toggleStatus(admin) {
     if (changingId !== null) return;
-    const activating = !Number(admin.is_active);
+    const activating = !Boolean(Number(admin.is_active));
     if (!activating && Number(admin.user_id) === Number(currentUser.user_id)) {
       return setError('You cannot deactivate your own account.');
     }
@@ -248,7 +248,6 @@ function AdminManagement({ request, currentUser }) {
           <h1>Manage Administrators</h1>
           <p>Create secure administrator accounts and control access to Workshop Pro.</p>
         </div>
-        <div className="admins-hero-symbol" aria-hidden="true">✦</div>
       </section>
 
       <div className="admins-metrics">
